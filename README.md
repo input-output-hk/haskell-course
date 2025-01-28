@@ -51,7 +51,6 @@ Everything else can be safely ignored
 
 ## To hang out and discuss with other students
 
-- [Canvas](https://iohk.instructure.com/enroll/3BAAGG)
 - [IOG's technical community (check out the #ask-haskell channel!)](https://discord.gg/inputoutput)
 
 ## FAQ
