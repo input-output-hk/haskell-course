@@ -1,8 +1,10 @@
 # Haskell Course
 
-[Versión en 🇪🇸](https://github.com/input-output-hk/haskell-course/tree/main/ES-translation)
+[Versión en 🇪🇸 traducida por la comunidad](https://github.com/input-output-hk/haskell-course/tree/main/ES-translation)
 
-**This course is designed to teach students Haskell from zero to everything needed to work with Marlowe and Plutus.** The course itself doesn't contain content specific to Marlowe or Plutus. So, if you want to use it to learn Haskell for other purposes, you can! 😃
+> *The easiest way to learn Haskell* - R.M.
+
+**This course is designed to teach non-engineers (e.g., self-taught/bootcamp coders) Haskell from zero to productive in an interactive, easy-to-follow way.** The course doesn't contain content specific to Marlowe or Plutus, but it will cover all the Haskell you'll needed to work with them.
 
 For a more detailed explanation, keep reading or watch the introduction video:
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://youtu.be/H1vbUKMKvnM)
@@ -13,11 +15,11 @@ In the [outline](#what-well-cover) below, there are clear stopping points (for b
 
 ## How to read/watch the lessons
 
-To go through the interactive lessons, go to your chosen lesson's outline inside "[What we'll cover](#what-well-cover)" and click on the button that looks like the one below. If the page loads with a "500: Internal Server Error" just refresh it, and it should be fine. At the top, you will see a console that displays the progress of preparing your interactive lesson. During this time, you can scroll down and look at the lesson, that is displayed non-interactively.
+To go through the **interactive lessons**, go to your chosen lesson's outline inside "[What we'll cover](#what-well-cover)" and click on the button that looks like the one below. If the page loads with a "500: Internal Server Error" just refresh it, and it should be fine. At the top, you will see a console that displays the progress of preparing your interactive lesson. During this time, you can scroll down and look at the lesson, that is displayed non-interactively.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F01-Introduction-to-haskell.ipynb)
 
-And to see the video, click on the button that looks like this:
+And to see the **video lessons**, click on the button that looks like this:
 
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://youtu.be/H1vbUKMKvnM)
 
@@ -49,7 +51,6 @@ Everything else can be safely ignored
 
 ## To hang out and discuss with other students
 
-- [Canvas](https://iohk.instructure.com/enroll/3BAAGG)
 - [IOG's technical community (check out the #ask-haskell channel!)](https://discord.gg/inputoutput)
 
 ## FAQ
@@ -68,7 +69,8 @@ Everything else can be safely ignored
 
 ---
 
-### START OF THE BEGINNER SECTION 🐣⟶🐥
+### BEGINNER SECTION - GETTING STARTED WITH HASKELL - 🥚⟶🐣
+In this section, we get familiar with basic concepts and Haskell syntax.
 
 ---
 
@@ -175,156 +177,196 @@ Everything else can be safely ignored
   - Value parameters
 - Record syntax
 
-### 9. Creating Parameterized and Recursive Types
+### 9. Creating Parameterized and Recursive Types [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F09-Creating-parameterized-and-recursive-types.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=wPV94aZIOGQ)
 
 - Type Parameters
-  - Prameteryzing type synonyms
-  - Prameteryzing data types
+  - Prameteryzing `type` synonyms
+  - Prameteryzing `data` types
 - Recursive data types
   - `Tweet` me a river
   - A `Sequence` of `Node`s
   - A `Tree` of `Node`s
-- The `newType` keyword
 - Kinds
+- The `newType` keyword
 
-### 10. Creating Type Classes and Instances
+### 10. Creating Type Classes and Instances [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F10-Creating-Type-Classes-and-Instances.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=I6tmM3wNGEI)
 
-- Revisiting Type Classes
+- Overloading
+- Steps to create Type Classes and Instances
 - The `Eq` type class
-  - Defining the `Eq` type class
-  - Defining an instance for the `Eq` type class
-  - Improving our `Eq` type class (minimal complete definition)
-  - Defining an instance for a parameterize type.
-- The `Ord` type class
-  - Exploring `Ord` type class (Subclassing)
+  - Defining the Type Class
+  - Defining multiple instances
+  - Improving our `Eq` type class with mutual recursion (and Minimal Complete Definitions)
+  - Defining an instance for a parameterized type.
+- The `WeAccept` Type Class
+- The `Container` Type Class
+- Exploring `Ord` type class (Subclassing)
 - Deriving
-- Complete example
+  - Deriving can go wrong
 
-### 11. Basic IO
+### 11. Basic IO  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F11-Basic-IO.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=0xQ8j6h8bNc)
 
-- We need side effects
-- What is IO
-- main + putStrLn + composing other functions
-- `>>`
-- `>>=`
-- do notation
-  - `do`
-  - `<-`
-  - `let`
-- Some examples
-- Read/Write to console
-- Read/Write to file
+- Pure functions
+- Introduction to IO actions
+- IO actions under the hood
+- IO actions in practice
+  - The `()` type
+- Interacting with the user
+  - `getChar`, `getLine`, and `putStrLn`
+- Actions are first-class values
+- Composing IO actions (`>>` and `>>=` operators)
+- The `do` block
+  - Using `let`, nesting do-blocks, escaping `IO` and `return`
+- The `main` action
+- Concepts and syntax recap
 
-### 12. Pragmas, Modules, and Cabal
+---
 
-- Prelude
-- pragmas/extensions
-- Overview of base modules
-- Importing base modules
-- A few modules
-  - Data.Char
-  - Data.Tuple
-  - Data.Array
-- Creating our own modules
+### BEGINNER SECTION - GAINING INDEPENDENCE - 🐣⟶🐥
+In this section, we learn about Haskell tooling and the necessary concepts to start working on our own projects.
+
+---
+
+### 12. Installing Haskell Locally [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F12-Installing-Haskell-and-first-program.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=hSN5mxITv0A&list=PLNEK_Ejlx3x1D9Vq5kqeC3ZDEP7in4dqb&index=13)
+
+- Installing Haskell
+    - Installing GHCup
+    - Installing GHC, Cabal, Stack, and HLS with GHCup
+    - Installing VSCode Extensions
+- Creating our first program
+    - Writing the simplest Haskell program
+    - Compiling and running our program
+
+### 13. Modules [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F13-Modules.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=R64sCXU0Ru0&list=PLNEK_Ejlx3x1D9Vq5kqeC3ZDEP7in4dqb&index=14)
+
+- Importing Modules
+    - Controlling environments
+    - Controlling namespaces
+- Creating our own Modules
+- The `Prelude` and Standard Libraries
+
+### 14. Cabal and language extensions [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F14-Cabal_and_language_extensions.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=AvpMOMSSZHs&list=PLNEK_Ejlx3x1D9Vq5kqeC3ZDEP7in4dqb&index=15)
+
 - Cabal
-  - What is it and why we use it
-  - Cabal file
-  - Using external libraries with Cabal
+    - Introduction to Cabal
+    - Creating a new Haskell project
+    - Going over the Cabal file using an external library
+    - Building and running our executable
+- Language extensions and Pragmas
+    - Introduction
+    - `NumericUnderscores`
+    - `TypeApplications`
 
-### 13. Bits and Bytes
+### 15. Handling Errors [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F15-Handling-Errors.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=QkUCHFG1hK8&list=PLNEK_Ejlx3x1D9Vq5kqeC3ZDEP7in4dqb&index=16)
 
-- Grouping bits and bytes
-- Haskell and bytes
-- Lazy and strict byte strings
-- Example
+- There're always `Exception`s to the rule
+- Speed-running `Exception`s with a dumb self-driving 🤖 car 🚗
+  - I'm the `Exception` cause I have `class` 😎
+  - `throw` all the `Exception`s you want. I'll `catch` them all!
+- `Maybe` give me a value? 🙏
+  - Benefits of optional values
+- Ok, you `Either` give me a value or a reason why you didn't!
+- From `Exception`s to optional values
+- Tradeoffs
+  - So, what should I use?
 
-### 14. Handling Errors
+### 16. Learning on your own and final section project [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F16-Gaining-your-independence-and-project.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=ObZ_1eap5MY&list=PLNEK_Ejlx3x1D9Vq5kqeC3ZDEP7in4dqb&index=17)
+
+- Small tips and tricks 🤹
+  - REPL
+  - Hackage
+  - Hoogle
+  - `undefined`
+  - Type Holes 🕳️
+- Section's Final Project 🥳
+
+---
+
+### BEGINNER SECTION - BASIC ABSTRACTIONS & EFFECTS - 🐥⟶🐓
+In this section, we learn about a few of the most useful and talked about Abstractions in Haskell and how we deal with effects in general (not only `IO`).
+
+---
+
+### 17. Semigroup and Monoid [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F17-Semigroup-and-Monoid.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=-O1ZApHPvkg&list=PLNEK_Ejlx3x1D9Vq5kqeC3ZDEP7in4dqb&index=18)
+
+- What does it mean to abstract a pattern?
+- Why abstracting patterns (in general)?
+- Teaser: Why abstracting `Semigroup` and `Monoid`?
+- The `Semigroup` type class
+- The `Monoid` type class
+- What can I do with `Semigroup` and `Monoid`?
+
+### 18. Functor [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F18-Functor.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=Fb4qD5PWEs8&list=PLNEK_Ejlx3x1D9Vq5kqeC3ZDEP7in4dqb&index=19)
+
+- Abstracting the `map` function
+- The `Functor` type class
+- Defining `Functor` instances
+- Seemingly unintuitive `Functor` instances
+  - The `Either a` functor 🤔
+  - The `(,) a` functor 🤨
+  - The `(->) r` functor 🤯
+- Defining the `<$>` operator and *lifting* 🏋️ a function
+- `Functor` nesting dolls 🪆
+- Extra functions and `Functor` as defined in `base`
+
+
+### 19. Applicative and Effects [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F19-Applicative.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=7vxhNfNWP3k&list=PLNEK_Ejlx3x1D9Vq5kqeC3ZDEP7in4dqb&index=20)
+
+- Why `Applicative` functors?
+    - Our journey until now
+    - The limits of Functor
+- Function application at the `Functor` level 🥇
+- Being `pure` 😇
+- The `Applicative` type class
+- The `Applicative` laws
+- 🎆 Programming with effects 🎆
+- Extra functions and `Applicative` as defined in `base`
+
+### 20. Project using `Functor` and `Applicative`
+
+- TODO 
+
+### x. Monad
 
 - TODO
 
-### 15. Learning on your own and Map
+### x. Reader, Writer, and State Monads
 
-- Using GHCi to find out more
-- Hoogle
-- HaskellWiki
-- Walking through while teaching Map module
+- TODO
 
----
+### Maybe speed-running other type classes? 🤔
 
-### END OF THE BEGINNER SECTION 🐥
+- TODO
 
----
+### x. Final project
 
-#### Congratulations! 🥳 You can call yourself a (beginner) Haskell programmer!
-
-#### YOU'RE READY FOR THE MARLOWE PIONEER PROGRAM! 🥳🎉 (Keep going for Plutus.)
+- TODO
 
 ---
 
-### START OF THE INTERMEDIATE SECTION 🐥⟶🐓
+#### 🥳 CONGRATULATIONS! 🥳 You can call yourself a (beginner) Haskell developer!
+Thank you for going on this journey with me! Please feel free to give us feedback through issues, email, or Twitter. And share this course if you find it valuable. 😄🙌
 
 ---
 
-### 16. Monoid
+### Where can you go from now?
 
-- Basic idea (definition without details)
-- Intuitive examples
-- Extracting the pattern
-- Complete definition (with all the details/laws)
+It depends on your preferences. You could:
 
-### 17. Functor
+- If you're interested in Cardano, explore Marlowe, Plutus, Atlas, CardanoAPI, and other Cardano-related tools and libraries.
+- Start your own project and learn what you need on the way (e.g., a server, a compiler, a full-stack app using IHP)
+- Read Haskell books and sources that go into more advanced subjects. See recommended resources here.
+- Learn about specific subjects, for example (organized roughly by difficulty):
+  1. Explore the `base` library and understand all types and type classes.
+  1. Learn about Testing (unit vs property testing and QuickCheck).
+  1. Explore how to deal with Concurrency and Parallelism.
+  1. Learn about Parsers (Parser combinators, `Alternative` type class, `MonadPlus`, Parsec library).
+  1. Learn how Haskell deals with data structures under the Hood.
+  1. Monad Transformers and Free monads.
+  1. Generic programming.
+  1. Meta programming with Template Haskell.
+  1. Type-level programming.
 
-- Basic idea (definition without details)
-- Intuitive examples
-- Extracting the pattern
-- Complete definition (with all the details/laws)
+---
 
-### 18. Applicative
 
-- Basic idea (definition without details)
-- Intuitive examples
-- Extracting the pattern
-- Complete definition (with all the details/laws)
-
-### 19. Aeson
-
-- Aeson
-
-### 20. Monad
-
-- Basic idea (definition without details)
-- Intuitive examples
-- Extracting the pattern
-- Complete definition (with all the details/laws)
-- `do` notation in general
-
-### 21. Reader Monad
-
-- Incentive/Motivation
-- Binding strategy (see [here](https://wiki.haskell.org/All_About_Monads#The_Reader_monad))
-- Definition
-- Examples
-
-### 22. Writer Monad
-
-- Incentive/Motivation
-- Binding strategy
-- Definition
-- Examples
-
-### 23. State Monad
-
-- Incentive/Motivation
-- Binding strategy
-- Definition
-- Examples
-
-### 24. Monadic functions / Operating with Monads
-
-- liftM
-- sequence and sequence\_
-- mapM and mapM\_
-- filterM
-- foldM
-
-### TODO: It keeps going, but I'm not sure about the outline yet. 😬

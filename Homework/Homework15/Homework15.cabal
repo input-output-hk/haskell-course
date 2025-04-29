@@ -1,0 +1,27 @@
+cabal-version:   3.0
+name:            Homework15
+version:         0.1.0.0
+license:         MIT
+license-file:    LICENSE
+author:          Robertino Martinez
+maintainer:      robertino.martinez@iohk.io
+build-type:      Simple
+extra-doc-files: CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+executable Homework15A
+    import:           warnings
+    main-is:          Homework15A.hs
+    build-depends:    base ^>=4.16.4.0
+    hs-source-dirs:   app
+    default-language: Haskell2010
+
+
+library
+    import:           warnings
+    build-depends:    base ^>=4.16.4.0
+    hs-source-dirs:   src
+    exposed-modules:  Homework15B
+    default-language: Haskell2010

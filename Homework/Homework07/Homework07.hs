@@ -12,8 +12,12 @@
 
 
 -- Question 4
--- Add type signatures to the functions below and use type variables and type classes.
+-- Add the most general type signatures possible to the functions below.
 -- Then uncomment the functions and try to compile.
+
+--f1 x y z = show (x / y) ++ z
+
+--f2 x = if x == maxBound then minBound else succ x
 
 
 -- Question 5
