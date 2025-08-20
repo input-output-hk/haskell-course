@@ -322,23 +322,36 @@ In this section, we learn about a few of the most useful and talked about Abstra
 - 🎆 Programming with effects 🎆
 - Extra functions and `Applicative` as defined in `base`
 
-### 20. Project using `Functor` and `Applicative`
+### 20. Monad [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F20-Monad.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=BFgmrO-c0Ec&list=PLNEK_Ejlx3x1D9Vq5kqeC3ZDEP7in4dqb&index=21)
 
-- TODO 
+- Why `Monad`s?
+- Extracting the pattern for:
+    - `Maybe`
+    - `Either e`
+    - `Log`
+- Abstracting the `Monad` Type Class
+- The abstraction `Monad`chy
+- The `Monad`ic laws
+- `Monad` as defined in `base`
+- You have to `do` what you have to `do`
 
-### x. Monad
+### 21. Reader, Writer, and State Monads
 
-- TODO
+- Introduction
+- Logs `Writer` (based on `Log`)
+    - Incentive
+    - Generalizing `Log`
+    - Helper fucntions
+- Environment `Reader`
+    - Interacting with a (fake) database
+    - Extracting the pattern
+    - Using the `Reader` Monad
+- The `State` of things
+    - Implementing a vending machine
+    - Extracting the pattern
+    - Using the `State` Monad
 
-### x. Reader, Writer, and State Monads
-
-- TODO
-
-### Maybe speed-running other type classes? 🤔
-
-- TODO
-
-### x. Final project
+### 22. Final project
 
 - TODO
 
